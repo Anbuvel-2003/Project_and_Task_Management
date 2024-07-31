@@ -30,7 +30,7 @@ const LoginPage: React.FC<LoginPageProps> =
                             password: values.password,
                         };
                         try {
-                            const response = await axios.post("http://localhost:5001/api/loginUser", DATA, {
+                            const response = await axios.post( `${process.env.REACT_APP_BACKEND_URL}/api/loginUser`, DATA, {
                                 headers: {
                                     "Content-Type": "application/json",
                                 },

@@ -49,7 +49,7 @@ function UpdateTask() {
                         };                        
                         try {
                           const response = await fetch(
-                            `http://localhost:5001/api/updatetask/${params.id}`,
+                            `${process.env.REACT_APP_BACKEND_URL}/api/updatetask/${params.id}`,
                             {
                               method: "PUT",
                               headers: {

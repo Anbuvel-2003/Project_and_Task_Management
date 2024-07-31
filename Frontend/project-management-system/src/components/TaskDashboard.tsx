@@ -14,7 +14,7 @@ function TaskDashboard() {
   const gettasks = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5001/api/gettasks", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/gettasks`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function TaskDashboard() {
     )
     if (Comfirmation == true) {
       try {
-        const response = await fetch(`http://localhost:5001/api/deletetask/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/deletetask/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

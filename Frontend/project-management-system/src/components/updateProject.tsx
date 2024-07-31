@@ -50,7 +50,7 @@ function UpdateProject() {
                         };
                         try {
                           const response = await fetch(
-                            `http://localhost:5001/api/updateprojects/${params.id}`,
+                            `${process.env.REACT_APP_BACKEND_URL}/api/updateprojects/${params.id}`,
                             {
                               method: "PUT",
                               headers: {

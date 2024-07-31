@@ -16,7 +16,7 @@ function Dashboard() {
   const getproject = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5001/api/projects", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/projects`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function Dashboard() {
     )
     if (Comfirmation == true) {
       try {
-        const response = await fetch(`http://localhost:5001/api/deleteprojects/${id}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/deleteprojects/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

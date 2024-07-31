@@ -40,7 +40,7 @@ function AddProject() {
                             end_Date: values.end_Date
                         };
                         try {
-                            const response = await axios.post("http://localhost:5001/api/creteprojects", DATA, {
+                            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/creteprojects`, DATA, {
                                 headers: {
                                     "Content-Type": "application/json",
                                 },

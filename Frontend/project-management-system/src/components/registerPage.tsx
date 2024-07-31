@@ -52,7 +52,7 @@ const RegisterPage: React.FC<RegisterPageProps> = (props) => {
         console.log('DATA', DATA);
         console.log('====================================');
         try {
-            const response = await axios.post("http://localhost:5001/api/CreateUser", DATA, {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/CreateUser`, DATA, {
               headers: {
                 "Content-Type": "application/json",
               },
